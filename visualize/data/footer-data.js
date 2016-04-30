@@ -1,6 +1,10 @@
 var currentDate = new Date()
 
 footer_data = {
+  "site" : {
+    "name" : "Y-English GRE Test Preparation Framework",
+    "version" : "Development Preview",
+  },
   "copyright" : {
     "year" : currentDate.getFullYear(),
     "organization" : {
