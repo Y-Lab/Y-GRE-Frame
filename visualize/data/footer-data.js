@@ -4,6 +4,7 @@ footer_data = {
   "copyright" : {
     "year" : currentDate.getFullYear(),
     "organization" : {
+      "location" : "Beijing",
       "name" : "Y-English",
       "link" : "http:\/\/www.y-english.org\/",
       "type" : " Co., Ltd."
