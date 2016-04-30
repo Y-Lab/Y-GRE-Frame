@@ -2,37 +2,38 @@ var currentDate = new Date()
 
 footer_data = {
   "copyright" : {
+    "year" : currentDate.getFullYear(),
     "organization" : {
-      "link" : "http:\/\/teelab.net\/",
-      "name" : "TEELAB"
+      "name" : "Y-English",
+      "link" : "http:\/\/www.y-english.org\/",
+      "type" : " Co., Ltd."
     },
-    "year" : currentDate.getFullYear()
   },
   "powered_by" : [
     {
-      "version" : "",
+      "name" : "GitHub Pages",
       "link" : "http:\/\/github.io\/",
-      "name" : "GitHub Pages"
+      "version" : "",
     },
     {
-      "version" : "v3.3.6",
+      "name" : "Bootstrap",
       "link" : "http:\/\/getbootstrap.com\/",
-      "name" : "Bootstrap"
+      "version" : "v3.3.6",
     },
     {
-      "version" : "v1.11.3",
+      "name" : "jQuery",
       "link" : "http:\/\/jquery.com\/",
-      "name" : "jQuery"
+      "version" : "v1.11.3",
     },
     {
-      "version" : "v4.0.0",
+      "name" : "normalize.css",
       "link" : "http:\/\/necolas.github.io\/normalize.css\/",
-      "name" : "normalize.css"
+      "version" : "v4.0.0",
     },
     {
-      "version" : "v4.6.1",
+      "name" : "Font Awesome",
       "link" : "http:\/\/fortawesome.github.io\/Font-Awesome\/",
-      "name" : "Font Awesome"
-    }
-  ]
+      "version" : "v4.6.1",
+    },
+  ],
 };
