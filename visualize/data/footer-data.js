@@ -4,10 +4,10 @@ footer_data = {
   "copyright" : {
     "year" : currentDate.getFullYear(),
     "organization" : {
-      "location" : "Beijing",
+      "prefix" : "Beijing ",
       "name" : "Y-English",
       "link" : "http:\/\/www.y-english.org\/",
-      "type" : " Co., Ltd."
+      "suffix" : " Co., Ltd."
     },
   },
   "powered_by" : [
