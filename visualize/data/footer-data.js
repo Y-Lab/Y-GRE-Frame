@@ -16,11 +16,6 @@ footer_data = {
   },
   "powered_by" : [
     {
-      "name" : "GitHub Pages",
-      "link" : "http:\/\/github.io\/",
-      "version" : "",
-    },
-    {
       "name" : "Bootstrap",
       "link" : "http:\/\/getbootstrap.com\/",
       "version" : "v3.3.6",
@@ -39,6 +34,11 @@ footer_data = {
       "name" : "Font Awesome",
       "link" : "http:\/\/fortawesome.github.io\/Font-Awesome\/",
       "version" : "v4.6.1",
+    },
+    {
+      "name" : "RequireJS",
+      "link" : "http:\/\/requirejs.org\/",
+      "version" : "v2.2.0",
     },
   ],
 };
