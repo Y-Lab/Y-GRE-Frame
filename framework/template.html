@@ -83,17 +83,9 @@
       <div class="row">
         <!-- Main contents -->
         <div class="col-md-9" role="main">
-          <div class="bs-docs-section">
-            <h1 class="page-header">Basic Info</h1>
-          </div>
-          <div class="bs-docs-section">
-            <h1 class="page-header">Schedule</h1>
-          </div>
-          <div class="bs-docs-section">
-            <h1 class="page-header">Additional Info</h1>
-          </div>
-          <div id="passkey" class="bs-docs-section">
-            <h1 class="page-header">Passkey Info</h1>
+          <div id="framework-basics" class="bs-docs-section">
+            <h1 class="page-header">Basics</h1>
+            <h3 id="passkey" class="page-header">Passkey</h3>
             <form>
               <div class="form-group">
                 <label class="lead" for="passkey">Your Passkey</label>
@@ -106,13 +98,40 @@
               </div>
             </form>
           </div>
+          <div id="framework-schedule" class="bs-docs-section">
+            <h1 class="page-header">Schedule</h1>
+          </div>
+          <div id="framework-remarks" class="bs-docs-section">
+            <h1 class="page-header">Remarks</h1>
+          </div>
+<!--           <div id="passkey" class="bs-docs-section">
+            <h1 id="passkey" class="page-header">Passkey</h1>
+            <form>
+              <div class="form-group">
+                <label class="lead" for="passkey">Your Passkey</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Enter passkey here...">
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div> -->
         </div>
 
         <!-- Sidebar nav -->
         <div class="col-md-3">
           <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
             <ul class="nav bs-docs-sidenav">
-              <li><a href="#passkey">Your Passkey</a></li>
+              <li>
+                <a href="#framework-basics">Basics</a>
+                <ul class="nav">
+                    <li><a href="#passkey">Passkey</a></li>
+                </ul>
+              </li>
+              <li><a href="#framework-schedule">Schedule</a></li>
+              <li><a href="#framework-remarks">Remarks</a></li>
             </ul>
             <a class="back-to-top" href="#top">Back to Top</a>
           </div>
