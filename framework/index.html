@@ -8,7 +8,7 @@
     <meta name="description" content="Y-GRE Frame - Y-English GRE Test Preparation Framework">
     <meta name="keywords" content="Y-English, Y-GRE, GRE, Framework, Test, Preparation">
     <meta name="author" content="Y-English">
-    <title>Y-GRE Frame &middot; Y-English GRE Test Preparation Framework</title>
+    <title>Framework &middot; Y-English GRE Test Preparation Framework</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -83,11 +83,13 @@
       <div class="row">
         <!-- Main contents -->
         <div class="col-md-9" role="main">
-          <div id="passkey" class="bs-docs-section">
-            <h1 class="page-header">Your Passkey</h1>
+          <!-- Passkey -->
+          <div id="passkey-div" class="bs-docs-section">
+            <h1 id="passkey-h1">Passkey</h1>
             <form>
               <div class="form-group">
-                <!-- <label class="lead" for="passkey">Your Passkey</label> -->
+                <p class="text-muted">If you a passkey, you can submit it here.</p>
+                <label for="passkey">Submit passkey</label>
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Enter passkey here...">
                   <span class="input-group-btn">
@@ -103,7 +105,7 @@
         <div class="col-md-3">
           <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
             <ul class="nav bs-docs-sidenav">
-              <li><a href="#passkey">Your Passkey</a></li>
+              <li><a href="#passkey-h1">Passkey</a></li>
             </ul>
             <a class="back-to-top" href="#top">Back to Top</a>
           </div>
