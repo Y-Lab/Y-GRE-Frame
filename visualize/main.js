@@ -47,22 +47,16 @@ if (passkey) {
                         function (visualize_default) {
                             $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
                         },
-                        function (err) {
-                        }
                     );
                 }
             );
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-            $('#loading-progress-bar div span').html('Unable to load component: ' + data_file + '.js');
+            $('#loading-progress-bar div span').html('Invalid passkey: ' + data_file);
             require(
                 ['visualize_default'],
-                function (visualize_default) {
-                    $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
-                },
-                function (err) {
-                }
+                function (visualize_default) {}
             );
         }
     );
