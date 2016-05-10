@@ -25,27 +25,27 @@ if (passkey) {
         }
     });
 
-    $('#loading-progress-bar div span').html('正在下载数据……');
+    $('#loading-progress-bar div span').html('Loading data...');
     require(
         ['data'],
         function (data) {
-            $('#loading-progress-bar div span').html('努力渲染页面中 (｡•ˇ‸ˇ•｡)……');
+            $('#loading-progress-bar div span').html('Rendering page... (｡•ˇ‸ˇ•｡)');
             require(
                 ['visualize'],
                 function (visualize) {
                     $('#loading-progress-bar div').removeClass('progress-bar-striped');
-                    $('#loading-progress-bar div span').html('加载完毕！~\(≧▽≦)/~');
+                    $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
                     $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
                 },
                 function (err) {
                     $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-green').addClass('progress-bar-danger');
-                    $('#loading-progress-bar div span').html('无法加载组件：' + visualize_file + '.js');
+                    $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
                 }
             );
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-green').addClass('progress-bar-danger');
-            $('#loading-progress-bar div span').html('无法加载组件：' + data_file + '.js');
+            $('#loading-progress-bar div span').html('Unable to load component: ' + data_file + '.js');
         }
     );
 }
@@ -58,17 +58,17 @@ else {
         }
     });
 
-    $('#loading-progress-bar div span').html('努力渲染页面中 (｡•ˇ‸ˇ•｡)……');
+    $('#loading-progress-bar div span').html('Rendering page... (｡•ˇ‸ˇ•｡)');
     require(
         ['visualize'],
         function (visualize) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped');
-            $('#loading-progress-bar div span').html('加载完毕！~\(≧▽≦)/~');
+            $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
             $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-green').addClass('progress-bar-danger');
-            $('#loading-progress-bar div span').html('无法加载组件：' + visualize_file + '.js');
+            $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
         }
     );
 };
