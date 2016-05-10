@@ -363,7 +363,7 @@ $('#sidebar-nav-ul').append($('<li>')
     .append($('<ul>').attr('id', 'sidebar-nav-schedule-ul'))
 );
 for (var i in frame_data.schedule) {
-    $('#sidebar-nav-schedule-ul').append($('<li>').append('<a>').html('Week ' + String(Number(i) + )));
+    $('#sidebar-nav-schedule-ul').append($('<li>').append('<a>').html('Week ' + String(Number(i) + 1)));
 };
 
 // Remarks
