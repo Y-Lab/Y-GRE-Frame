@@ -360,7 +360,7 @@ for (var i in frame_data.schedule) {
 };
 $('#sidebar-nav-ul').append($('<li>')
     .append($('<a>').attr('href', '#schedule-h1').html('Schedule'))
-    .append($('<ul>').attr('id', 'sidebar-nav-schedule-ul'))
+    .append($('<ul>').attr('id', 'sidebar-nav-schedule-ul').addClass('nav'))
 );
 for (var i in frame_data.schedule) {
     $('#sidebar-nav-schedule-ul').append($('<li>').append('<a>').html('Week ' + String(Number(i) + 1)));
