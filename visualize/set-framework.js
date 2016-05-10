@@ -407,7 +407,7 @@ function getCurrentDate() {
     var currentDate = year + '-' + month + '-' + day;
     return currentDate;
 }
-$('#date' + getCurrentDate()).addClass('info');
+$('#date-' + getCurrentDate()).addClass('info');
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
