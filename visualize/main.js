@@ -26,40 +26,59 @@ require.config({
     }
 });
 
-$('#loading-progress-bar div span').html('Loading data...');
-require(
-    ['data'],
-    function (data) {
-        $('#loading-progress-bar div span').html('Busy rendering page... (｡•ˇ‸ˇ•｡)');
-        require(
-            ['visualize'],
-            function (visualize) {
-                $('#loading-progress-bar div').removeClass('progress-bar-striped');
-                $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
-                $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
-            },
-            function (err) {
-                $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-                $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
-                require(
-                    ['visualize_default'],
-                    function (visualize_default) {
-                    },
-                    function (err) {
-                    }
-                );
-            }
-        );
-    },
-    function (err) {
-        $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-        $('#loading-progress-bar div span').html('Unable to load component: ' + data_file + '.js');
-        require(
-            ['visualize_default'],
-            function (visualize_default) {
-            },
-            function (err) {
-            }
-        );
-    }
-);
+if (passkey) {
+    $('#loading-progress-bar div span').html('Loading data...');
+    require(
+        ['data'],
+        function (data) {
+            $('#loading-progress-bar div span').html('Busy rendering page... (｡•ˇ‸ˇ•｡)');
+            require(
+                ['visualize'],
+                function (visualize) {
+                    $('#loading-progress-bar div').removeClass('progress-bar-striped');
+                    $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
+                    $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+                },
+                function (err) {
+                    $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
+                    $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
+                    require(
+                        ['visualize_default'],
+                        function (visualize_default) {
+                            $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+                        },
+                        function (err) {
+                        }
+                    );
+                }
+            );
+        },
+        function (err) {
+            $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
+            $('#loading-progress-bar div span').html('Unable to load component: ' + data_file + '.js');
+            require(
+                ['visualize_default'],
+                function (visualize_default) {
+                    $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+                },
+                function (err) {
+                }
+            );
+        }
+    );
+}
+else {
+    $('#loading-progress-bar div span').html('Busy rendering page... (｡•ˇ‸ˇ•｡)');
+    require(
+        ['visualize_default'],
+        function (visualize_default) {
+            $('#loading-progress-bar div').removeClass('progress-bar-striped');
+            $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
+            $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+        },
+        function (err) {
+            $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
+            $('#loading-progress-bar div span').html('Unable to load component: ' + default_file + '.js');
+        }
+    );
+};
