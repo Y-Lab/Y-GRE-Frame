@@ -335,25 +335,25 @@ for (var i in frame_data.schedule) {
     $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + week_count)
         .append($('<th>').html(week_count))
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday.date))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].tuesday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].tuesday.date))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].wednesday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].wednesday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].wednesday.date))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].thursday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].thursday.date))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].friday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].friday.date))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].saturday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].saturday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].saturday.date))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].sunday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].sunday.date))
         )
         .append($('<td>').attr('id', 'nota-bene-week-' + week_count))
     );
@@ -393,21 +393,21 @@ for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
     $('#sidebar-nav-schedule-ul').append($('<li>').append($('<a>').attr('href', '#schedule-week-' + week_count).html('Week ' + week_count)));
 };
-function getCurrentDate() {
-    var date = new Date();
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-    if (month >= 1 && month <= 9) {
-        month = '0' + month;
-    }
-    if (day >= 0 && day <= 9) {
-        day = '0' + day;
-    }
-    var currentDate = year + '-' + month + '-' + day
-    return currentDate;
-}
-$('#date' + getCurrentDate()).addClass('info');
+// function getCurrentDate() {
+//     var date = new Date();
+//     var year = date.getFullYear();
+//     var month = date.getMonth() + 1;
+//     var day = date.getDate();
+//     if (month >= 1 && month <= 9) {
+//         month = '0' + month;
+//     }
+//     if (day >= 0 && day <= 9) {
+//         day = '0' + day;
+//     }
+//     var currentDate = year + '-' + month + '-' + day
+//     return currentDate;
+// }
+// $('#date' + getCurrentDate()).addClass('info');
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
