@@ -358,7 +358,13 @@ for (var i in frame_data.schedule) {
         .append($('<td>').attr('id', 'nota-bene-week-' + week_count))
     );
 };
-$('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#schedule-h1').html('Schedule')));
+$('#sidebar-nav-ul').append($('<li>')
+    .append($('<a>').attr('href', '#schedule-h1').html('Schedule'))
+    .append($('<ul>').attr('id', 'sidebar-nav-schedule-ul'))
+);
+for (var i in frame_data.schedule) {
+    $('#sidebar-nav-schedule-ul').append($('<li>').append('<a>').html('Week ' + String(Number(i) + )));
+};
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
