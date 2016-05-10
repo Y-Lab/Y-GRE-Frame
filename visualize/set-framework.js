@@ -344,7 +344,7 @@ for (var i in frame_data.schedule) {
             .append($('<div>').append($('<strong>').html(frame_data.schedule[i].wednesday.date.slice(5))))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].thursday.date.slice(5))))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].thursday.date)))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday.date)
             .append($('<div>').append($('<strong>').html(frame_data.schedule[i].friday.date.slice(5))))
