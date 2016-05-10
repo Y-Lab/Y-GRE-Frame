@@ -334,25 +334,25 @@ for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
     $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + week_count)
         .append($('<th>').html(week_count))
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].monday.date))))
         )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].tuesday.date))))
         )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].wednesday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].wednesday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].wednesday.date))))
         )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].thursday.date))))
         )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].friday.date))))
         )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].saturday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].saturday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].saturday.date))))
         )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday.date.replace('/', ''))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday.date.replace('[/]', '-'))
             .append($('<div>').append($('<strong>').append($('<small>').html(frame_data.schedule[i].sunday.date))))
         )
         .append($('<td>').attr('id', 'nota-bene-week-' + week_count))
@@ -361,25 +361,25 @@ for (var i in frame_data.schedule) {
 for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
     for (var j in frame_data.schedule[i].monday.tasks) {
-        $('#date-' + frame_data.schedule[i].monday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].monday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].monday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].monday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].tuesday.tasks) {
-        $('#date-' + frame_data.schedule[i].tuesday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].tuesday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].tuesday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].tuesday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].wednesday.tasks) {
-        $('#date-' + frame_data.schedule[i].wednesday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].wednesday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].wednesday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].wednesday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].thursday.tasks) {
-        $('#date-' + frame_data.schedule[i].thursday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].thursday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].thursday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].thursday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].friday.tasks) {
-        $('#date-' + frame_data.schedule[i].friday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].friday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].friday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].friday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].saturday.tasks) {
-        $('#date-' + frame_data.schedule[i].saturday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].saturday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].saturday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].saturday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].sunday.tasks) {
-        $('#date-' + frame_data.schedule[i].sunday.date.replace('/', '')).append($('<div>').html(frame_data.schedule[i].sunday.tasks[j]));
+        $('#date-' + frame_data.schedule[i].sunday.date.replace('[/]', '-')).append($('<div>').html(frame_data.schedule[i].sunday.tasks[j]));
     };
     for (var j in frame_data.schedule[i].nota_bene) {
         $('#nota-bene-week-' + week_count).append($('<div>').html(frame_data.schedule[i].nota_bene[j]));
