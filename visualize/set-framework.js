@@ -1,5 +1,6 @@
 // set-framework.js
 
 function submitPasskey() {
-    var $('#input-passkey').val();
+    var passkey = $('#input-passkey').val();
+    window.location.href= window.location.href + '?passkey=' + passkey;
 }
