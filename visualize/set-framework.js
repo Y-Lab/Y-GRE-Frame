@@ -22,13 +22,13 @@ function urlJump() {
 $('#submit-passkey').click(
     function() {
         urlJump();
-    };
+    }
 );
 
 $('#input-passkey').keydown(
     function() {
         if (event.keyCode == '13') {
             urlJump();
-        };
-    };
+        }
+    }
 );
