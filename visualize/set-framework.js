@@ -314,7 +314,11 @@ $('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#schedule-h1
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
     .append($('<h1>').attr('id', 'remarks-h1').addClass('page-header').html('Remarks'))
+    .append($('<ol>').attr('id', 'remarks-ol'))
 )
+for (var i in frame_data.remarks) {
+    $('#remarks-ol').append($('<li>').html(frame_data.remarks[i]));
+};
 $('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#remarks-h1').html('Remarks')));
 
 // Passkey
