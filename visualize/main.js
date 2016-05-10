@@ -38,13 +38,13 @@ if (passkey) {
                     $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
                 },
                 function (err) {
-                    $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-green').addClass('progress-bar-danger');
+                    $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
                     $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
                 }
             );
         },
         function (err) {
-            $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-green').addClass('progress-bar-danger');
+            $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
             $('#loading-progress-bar div span').html('Unable to load component: ' + data_file + '.js');
         }
     );
@@ -67,7 +67,7 @@ else {
             $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
         },
         function (err) {
-            $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-green').addClass('progress-bar-danger');
+            $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
             $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
         }
     );

@@ -113,6 +113,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {
 .progress-bar-green {
     background-color: #006f68;
 }
+.progress-bar-blue {
+    background-color: #047edd;
+}
 
 /* Chart */
 .chart {
