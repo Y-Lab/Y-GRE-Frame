@@ -298,9 +298,49 @@ $('#sidebar-nav-ul').append($('<li>')
         .append($('<li>').append($('<a>').attr('href', '#general-basics-h3').html('Basics')))
         .append($('<li>').append($('<a>').attr('href', '#general-scores-gre-div').html('GRE Scores')))
         .append($('<li>').append($('<a>').attr('href', '#general-scores-toefl-div').html('TOEFL Scores')))
-        .append($('<li>').append($('<a>').attr('href', '#general-scores-gaokao-div').html('CCE Score')))
+        .append($('<li>').append($('<a>').attr('href', '#general-scores-gaokao-div').html('CCE Scores')))
         .append($('<li>').append($('<a>').attr('href', '#general-application-h3').html('Application')))
         .append($('<li>').append($('<a>').attr('href', '#general-framework-h3').html('Framework')))
         .append($('<li>').append($('<a>').attr('href', '#general-assessment-h3').html('Assessment')))
+    )
+);
+
+// Schedule
+$('#main-container').append($('<div>').attr('id', 'schedule-div').addClass('bs-docs-section')
+    .append($('<h1>').attr('id', 'schedule-h1').addClass('page-header').html('Schedule'))
+)
+$('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#schedule-h1').html('Schedule')));
+
+// Remarks
+$('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
+    .append($('<h1>').attr('id', 'remarks-h1').addClass('page-header').html('Remarks'))
+)
+$('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#remarks-h1').html('Remarks')));
+
+// Passkey
+$('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-docs-section')
+    .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').html('Passkey'))
+    .append($('<h3>').attr('id', 'your-passkey-h3').html('Your Passkey'))
+    .append($('<p>').addClass('text-muted').html('Due to security reasons, your passkey is the only way to access your Y-English GRE Test Preparation Framework. Please keep it safe. If you forget your passkey, you should contact the Y-English staff to help you retrieve it.'))
+    .append($('<p>').addClass('lead').append($('<code>').html(passkey)))
+    .append($('<h3>').attr('id', 'update-passkey-h3').html('Update Passkey'))
+    .append($('<form>').attr('action', '/framework/').attr('method', 'get')
+        .append($('<div>').addClass('form-group')
+            .append($('<p>').addClass('text-muted').html('If you have another passkey, you can submit it here.'))
+            .append($('<label>').attr('for', 'input-passkey').html('Submit another passkey'))
+            .append($('<div>').addClass('input-group')
+                .append($('<input>').attr('type', 'text').attr('name', 'passkey').attr('id', 'input-passkey').addClass('form-control').attr('placeholder', 'Enter passkey here...'))
+                .append($('<span>').addClass('input-group-btn')
+                    .append($('<button>').attr('type', 'submit').attr('id', 'submit-passkey').addClass('btn btn-default').html('Submit'))
+                )
+            )
+        )
+    )
+);
+$('#sidebar-nav-ul').append($('<li>')
+    .append($('<a>').attr('href', '#passkey-h1').html('Passkey'))
+    .append($('<ul>').addClass('nav')
+        .append($('<li>').append($('<a>').attr('href', '#your-passkey-h3').html('Your Passkey')))
+        .append($('<li>').append($('<a>').attr('href', '#update-passkey-h3').html('Update Passkey')))
     )
 );
