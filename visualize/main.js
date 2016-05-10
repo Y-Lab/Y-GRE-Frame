@@ -22,7 +22,7 @@ require.config({
     paths: {
         'data': data_file,
         'visualize': visualize_file,
-        'default': default_file,
+        'visualize_default': default_file,
     }
 });
 
@@ -42,8 +42,8 @@ require(
                 $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
                 $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
                 require(
-                    ['default'],
-                    function (default) {
+                    ['visualize_default'],
+                    function (visualize_default) {
                     },
                     function (err) {
                     }
@@ -55,8 +55,8 @@ require(
         $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
         $('#loading-progress-bar div span').html('Unable to load component: ' + data_file + '.js');
         require(
-            ['default'],
-            function (default) {
+            ['visualize_default'],
+            function (visualize_default) {
             },
             function (err) {
             }
