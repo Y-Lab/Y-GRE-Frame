@@ -404,11 +404,11 @@ function getCurrentDate() {
     // if (day >= 0 && day <= 9) {
     //     day = '0' + day;
     // }
-    var currentDate = year + '-' + month + '-' + day
+    var currentDate = year + '-' + month + '-' + day;
     return currentDate;
 }
 $('#date' + getCurrentDate()).addClass('info');
-console.log(getCurrentDate())
+console.log(getCurrentDate());
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
