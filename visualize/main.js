@@ -58,7 +58,9 @@ if (passkey) {
             $('#loading-progress-bar div span').html('Invalid passkey: ' + passkey);
             require(
                 ['visualize_default'],
-                function (visualize_default) {}
+                function (visualize_default) {
+                    $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+                }
             );
         }
     );
