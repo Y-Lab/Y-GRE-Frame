@@ -14,10 +14,9 @@ function getQueryVariable(variable) {
 
 passkey = getQueryVariable('passkey');
 
-visualize_file = 'set-framework';
-
 if (passkey) {
     data_file = 'data/' + passkey;
+    visualize_file = 'set-framework';
 
     require.config({
         paths: {
@@ -51,6 +50,8 @@ if (passkey) {
     );
 }
 else {
+    visualize_file = 'set-framework-empty';
+
     require.config({
         paths: {
             'visualize': visualize_file,
