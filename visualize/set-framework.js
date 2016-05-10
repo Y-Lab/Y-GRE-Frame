@@ -2,6 +2,5 @@
 
 function submitPasskey() {
     var passkey = $('#input-passkey').val();
-    // var passkey = document.getElementById('input-passkey').value;
-    window.location.href = window.location.href + '?passkey=' + passkey;
+    window.location.href = 'http://frame.y-gre.org/framework/?passkey=' + passkey;
 }
