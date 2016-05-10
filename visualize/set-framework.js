@@ -329,14 +329,42 @@ $('#main-container').append($('<div>').attr('id', 'schedule-div').addClass('bs-d
             .append($('<tbody>').attr('id', 'schedule-tbody'))
         )
     )
-)
+);
+for (var i in frame_data.schedule) {
+    var week_count = i + 1;
+    $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + String(week_count))
+        .append($('<th>').html(String(week_count)))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday[0])))
+        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].tuesday[0])))
+        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].wednesday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].wednesday[0])))
+        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].thursday[0])))
+        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].friday[0])))
+        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].saturday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].saturday[0])))
+        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday[0])
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].sunday[0])))
+        )
+        .append($('<td>').attr('id', 'nota-bene-week-' + String(week_count)))
+    );
+};
 $('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#schedule-h1').html('Schedule')));
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
     .append($('<h1>').attr('id', 'remarks-h1').addClass('page-header').html('Remarks'))
     .append($('<ol>').attr('id', 'remarks-ol'))
-)
+);
 for (var i in frame_data.remarks) {
     $('#remarks-ol').append($('<li>').html(frame_data.remarks[i]));
 };
