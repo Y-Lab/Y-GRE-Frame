@@ -331,9 +331,9 @@ $('#main-container').append($('<div>').attr('id', 'schedule-div').addClass('bs-d
     )
 );
 for (var i in frame_data.schedule) {
-    var week_count = i + 1;
-    $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + String(week_count))
-        .append($('<th>').html(String(week_count)))
+    var week_count = String(Number(i) + 1);
+    $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + week_count)
+        .append($('<th>').html(week_count))
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday[0])
             .append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday[0])))
         )
@@ -355,7 +355,7 @@ for (var i in frame_data.schedule) {
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday[0])
             .append($('<div>').append($('<strong>').html(frame_data.schedule[i].sunday[0])))
         )
-        .append($('<td>').attr('id', 'nota-bene-week-' + String(week_count)))
+        .append($('<td>').attr('id', 'nota-bene-week-' + week_count))
     );
 };
 $('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#schedule-h1').html('Schedule')));
