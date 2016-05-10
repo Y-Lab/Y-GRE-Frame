@@ -10,7 +10,7 @@ $('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-do
             .append($('<div>').addClass('input-group')
                 .append($('<input>').attr('type', 'text').attr('name', 'passkey').attr('id', 'input-passkey').addClass('form-control').attr('placeholder', 'Enter passkey here...'))
                 .append($('<span>').addClass('input-group-btn')
-                    .append('<button>').attr('type', 'submit').attr('id', 'submit-passkey').addClass('btn btn-default').html('Submit')
+                    .append($('<button>').attr('type', 'submit').attr('id', 'submit-passkey').addClass('btn btn-default').html('Submit'))
                 )
             )
         )
