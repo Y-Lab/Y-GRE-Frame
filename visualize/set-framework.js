@@ -28,7 +28,8 @@ $('#submit-passkey').click(
 $('#input-passkey').keydown(
     function() {
         if (event.keyCode == '13') {
-            urlJump();
+            // urlJump();
+            $('#submit-passkey').click()
         }
     }
 );
