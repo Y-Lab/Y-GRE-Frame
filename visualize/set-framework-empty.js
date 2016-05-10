@@ -1,4 +1,4 @@
-// set-framework-default.js
+// set-framework-empty.js
 
 $('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-docs-section')
     .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').html('Passkey'))
@@ -8,7 +8,7 @@ $('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-do
             .append($('<p>').addClass('text-muted').html('If you a passkey, you can submit it here.'))
             .append($('<label>').attr('for', 'input-passkey').html('Submit passkey'))
             .append($('<div>').addClass('input-group')
-                .append($('<input>').attr('type', 'text').attr('name', 'passkey').attr('id', 'input-passkey').addClass('form-control').attr('placeholder', 'Enter passkey here...').attr('value', passkey))
+                .append($('<input>').attr('type', 'text').attr('name', 'passkey').attr('id', 'input-passkey').addClass('form-control').attr('placeholder', 'Enter passkey here...'))
                 .append($('<span>').addClass('input-group-btn')
                     .append($('<button>').attr('type', 'submit').attr('id', 'submit-passkey').addClass('btn btn-default').html('Submit'))
                 )

@@ -16,12 +16,14 @@ passkey = getQueryVariable('passkey');
 
 var data_file = 'data/' + passkey;
 var visualize_file = 'set-framework';
+var empty_file = 'set-framework-empty';
 var default_file = 'set-framework-default';
 
 require.config({
     paths: {
         'data': data_file,
         'visualize': visualize_file,
+        'visualize_empty': empty_file,
         'visualize_default': default_file,
     }
 });
@@ -53,7 +55,7 @@ if (passkey) {
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-            $('#loading-progress-bar div span').html('Invalid passkey: ' + data_file);
+            $('#loading-progress-bar div span').html('Invalid passkey: ' + passkey);
             require(
                 ['visualize_default'],
                 function (visualize_default) {}
@@ -64,15 +66,15 @@ if (passkey) {
 else {
     $('#loading-progress-bar div span').html('Busy rendering page... (｡•ˇ‸ˇ•｡)');
     require(
-        ['visualize_default'],
-        function (visualize_default) {
+        ['visualize_empty'],
+        function (visualize_empty) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped');
             $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
             $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-            $('#loading-progress-bar div span').html('Unable to load component: ' + default_file + '.js');
+            $('#loading-progress-bar div span').html('Unable to load component: ' + empty_file + '.js');
         }
     );
 };
