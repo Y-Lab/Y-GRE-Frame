@@ -2,5 +2,6 @@
 
 function submitPasskey() {
     var passkey = $('#input-passkey').val();
-    window.location.href= window.location.href + '?passkey=' + passkey;
+    // var passkey = document.getElementById('input-passkey').value;
+    window.location.href = window.location.href + '?passkey=' + passkey;
 }
