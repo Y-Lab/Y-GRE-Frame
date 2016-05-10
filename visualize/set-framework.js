@@ -363,7 +363,8 @@ $('#sidebar-nav-ul').append($('<li>')
     .append($('<ul>').attr('id', 'sidebar-nav-schedule-ul').addClass('nav'))
 );
 for (var i in frame_data.schedule) {
-    $('#sidebar-nav-schedule-ul').append($('<li>').append($('<a>').html('Week ' + String(Number(i) + 1))));
+    var week_count = String(Number(i) + 1);
+    $('#sidebar-nav-schedule-ul').append($('<li>').append($('<a>').attr('href', '#schedule-week-' + week_count).html('Week ' + week_count)));
 };
 
 // Remarks
