@@ -12,6 +12,7 @@ function getQueryVariable(variable) {
     return ('default');
 }
 
+
 passkey = getQueryVariable('passkey');
 
 data_file = 'data/' + passkey;
