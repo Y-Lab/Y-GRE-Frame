@@ -292,3 +292,15 @@ $('#main-container').append($('<div>').attr('id', 'general-div').addClass('bs-do
         )
     )
 );
+$('#sidebar-nav-ul').append($('<li>')
+    .append($('<a>').attr('href', '#general-h1').html('General'))
+    .append($('<ul>').addClass('nav')
+        .append($('<li>').append($('<a>').attr('href', '#general-basics-h3').html('Basics')))
+        .append($('<li>').append($('<a>').attr('href', '#general-scores-gre-div').html('GRE Scores')))
+        .append($('<li>').append($('<a>').attr('href', '#general-scores-toefl-div').html('TOEFL Scores')))
+        .append($('<li>').append($('<a>').attr('href', '#general-scores-gaokao-div').html('CCE Score')))
+        .append($('<li>').append($('<a>').attr('href', '#general-application-h3').html('Application')))
+        .append($('<li>').append($('<a>').attr('href', '#general-framework-h3').html('Framework')))
+        .append($('<li>').append($('<a>').attr('href', '#general-assessment-h3').html('Assessment')))
+    )
+);
