@@ -38,7 +38,7 @@ if (passkey) {
                 ['visualize'],
                 function (visualize) {
                     $('#loading-progress-bar div').removeClass('progress-bar-striped');
-                    $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
+                    $('#loading-progress-bar div span').html('Well done! ~\\\(≧▽≦)/~');
                     $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
                 },
                 function (err) {
@@ -67,7 +67,7 @@ else {
         ['visualize_empty'],
         function (visualize_empty) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped');
-            $('#loading-progress-bar div span').html('Well done! ~\(≧▽≦)/~');
+            $('#loading-progress-bar div span').html('Well done! ~\\\(≧▽≦)/~');
             $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
         },
         function (err) {
