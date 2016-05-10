@@ -26,10 +26,23 @@ $('#submit-passkey').click(
 );
 
 $('#input-passkey').keydown(
-    function() {
+    function(event) {
         if (event.keyCode == '13') {
-            // urlJump();
-            $('#submit-passkey').click()
+            urlJump();
+            // $('#submit-passkey').click()
         }
     }
 );
+
+
+// $(function(){
+//   $(document).keydown(function(event){
+//     if(event.keyCode==13){
+//        $("#submit-passkey").click();
+//     }
+//  });
+
+//  $("#submit-passkey").click(function(){
+//      alert("nihao");
+//  });
+// })
