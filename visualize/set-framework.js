@@ -335,7 +335,7 @@ for (var i in frame_data.schedule) {
     $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + week_count)
         .append($('<th>').html(week_count))
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday.date)
-            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday.date)))
+            .append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday.date.slice(-5))))
         )
         .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday.date)
             .append($('<div>').append($('<strong>').html(frame_data.schedule[i].tuesday.date.slice(-5))))
