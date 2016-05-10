@@ -408,7 +408,6 @@ function getCurrentDate() {
     return currentDate;
 }
 $('#date' + getCurrentDate()).addClass('info');
-console.log(getCurrentDate());
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
