@@ -1,5 +1,9 @@
 // main.js
 
+function submitPasskey() {
+    var $('#input-passkey').val();
+}
+
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');

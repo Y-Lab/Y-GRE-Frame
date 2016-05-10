@@ -86,17 +86,19 @@
           <!-- Passkey -->
           <div id="passkey-div" class="bs-docs-section">
             <h1 id="passkey-h1" class="page-header">Passkey</h1>
-            <div class="form-group">
-              <p class="text-muted">Due to security reasons, your passkey is the only way to access your Y-English GRE Test Preparation Framework. Please keep it safe. If you forget your passkey, you should contact the Y-English staff to help you retrieve it.</p>
-              <p class="text-muted">If you a passkey, you can submit it here.</p>
-              <label for="input-passkey">Submit passkey</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="input-passkey" placeholder="Enter passkey here...">
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-default" onclick="submitPasskey()">Submit</button>
-                </span>
+            <form>
+              <div class="form-group">
+                <p class="text-muted">Due to security reasons, your passkey is the only way to access your Y-English GRE Test Preparation Framework. Please keep it safe. If you forget your passkey, you should contact the Y-English staff to help you retrieve it.</p>
+                <p class="text-muted">If you a passkey, you can submit it here.</p>
+                <label for="input-passkey">Submit passkey</label>
+                <div class="input-group">
+                  <input id="input-passkey" type="text" class="form-control" placeholder="Enter passkey here...">
+                  <span class="input-group-btn">
+                    <input type="submit" class="btn btn-default" onclick="submitPasskey()">Submit</input>
+                  </span>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
 
