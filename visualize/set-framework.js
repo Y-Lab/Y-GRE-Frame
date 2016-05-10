@@ -284,7 +284,7 @@ $('#main-container').append($('<div>').attr('id', 'general-div').addClass('bs-do
             .append($('<div>').addClass('col-sm-4')
                 .append($('<strong>')
                     .append('2')
-                    .append($('<sup>').html('st'))
+                    .append($('<sup>').html('nd'))
                     .append(' Executive Supervisor')
                 )
             )
