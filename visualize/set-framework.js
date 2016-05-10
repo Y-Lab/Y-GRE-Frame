@@ -393,21 +393,22 @@ for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
     $('#sidebar-nav-schedule-ul').append($('<li>').append($('<a>').attr('href', '#schedule-week-' + week_count).html('Week ' + week_count)));
 };
-// function getCurrentDate() {
-//     var date = new Date();
-//     var year = date.getFullYear();
-//     var month = date.getMonth() + 1;
-//     var day = date.getDate();
-//     if (month >= 1 && month <= 9) {
-//         month = '0' + month;
-//     }
-//     if (day >= 0 && day <= 9) {
-//         day = '0' + day;
-//     }
-//     var currentDate = year + '-' + month + '-' + day
-//     return currentDate;
-// }
-// $('#date' + getCurrentDate()).addClass('info');
+function getCurrentDate() {
+    var today = new Date();
+    var year = today.getFullYear();
+    var month = today.getMonth() + 1;
+    var day = today.getDate();
+    // if (month >= 1 && month <= 9) {
+    //     month = '0' + month;
+    // }
+    // if (day >= 0 && day <= 9) {
+    //     day = '0' + day;
+    // }
+    var currentDate = year + '-' + month + '-' + day
+    return currentDate;
+}
+$('#date' + getCurrentDate()).addClass('info');
+console.log(getCurrentDate())
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
