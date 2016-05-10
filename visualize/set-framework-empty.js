@@ -1,6 +1,6 @@
 // set-framework-empty.js
 
-$('#main-contianer').append($('<div>').attr('id', 'passkey-div').addClass('bs-docs-section')
+$('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-docs-section')
     .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').html('Passkey'))
     .append($('<form>').attr('action', '/framework/').attr('method', 'get')
         .append($('<div>').addClass('form-group')
