@@ -11,7 +11,7 @@ footer_data = {
       "prefix" : "Beijing ",
       "name" : "Y-English",
       "link" : "http:\/\/www.y-english.org\/",
-      "suffix" : " Education Co., Ltd."
+      "suffix" : " Education Technology Co., Ltd."
     },
   },
   "powered_by" : [
