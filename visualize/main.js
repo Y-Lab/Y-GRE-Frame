@@ -16,7 +16,7 @@ passkey = getQueryVariable('passkey');
 
 var data_file = 'data/' + passkey;
 var visualize_file = 'set-framework';
-var empty_file = 'set-framework-empty';
+var empty_file = 'set-framework-passkey';
 var default_file = 'set-framework-default';
 
 require.config({
@@ -43,7 +43,7 @@ if (passkey) {
                 },
                 function (err) {
                     $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-                    $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file + '.js');
+                    $('#loading-progress-bar div span').html('Unable to load component: ' + visualize_file);
                     require(
                         ['visualize_default'],
                         function (visualize_default) {}
@@ -72,7 +72,7 @@ else {
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
-            $('#loading-progress-bar div span').html('Unable to load component: ' + empty_file + '.js');
+            $('#loading-progress-bar div span').html('Unable to load component: ' + empty_file);
         }
     );
 };
