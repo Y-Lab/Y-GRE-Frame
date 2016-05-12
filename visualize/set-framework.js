@@ -330,7 +330,6 @@ $('#main-container').append($('<div>').attr('id', 'schedule-div').addClass('bs-d
         )
     )
 );
-function () { if (frame_data.schedule[i].monday.display) { return (frame_data.schedule[i].monday.date.slice(5)) }}
 for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
     $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + week_count)
