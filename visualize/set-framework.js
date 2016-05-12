@@ -330,56 +330,85 @@ $('#main-container').append($('<div>').attr('id', 'schedule-div').addClass('bs-d
         )
     )
 );
+function () { if (frame_data.schedule[i].monday.display) { return (frame_data.schedule[i].monday.date.slice(5)) }}
 for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
     $('#schedule-tbody').append($('<tr>').attr('id', 'schedule-week-' + week_count)
         .append($('<th>').html(week_count))
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].monday.display) {return (frame_data.schedule[i].monday.date.slice(5))}})))
-        )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].tuesday.display) {return (frame_data.schedule[i].tuesday.date.slice(5))}})))
-        )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].wednesday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].wednesday.display) {return (frame_data.schedule[i].wednesday.date.slice(5))}})))
-        )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].thursday.display) {return (frame_data.schedule[i].thursday.date.slice(5))}})))
-        )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].friday.display) {return (frame_data.schedule[i].friday.date.slice(5))}})))
-        )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].saturday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].saturday.display) {return (frame_data.schedule[i].saturday.date.slice(5))}})))
-        )
-        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday.date)
-            .append($('<div>').append($('<strong>').html(function () {if (frame_data.schedule[i].sunday.display) {return (frame_data.schedule[i].sunday.date.slice(5))}})))
-        )
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].monday.date))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].tuesday.date))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].wednesday.date))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].thursday.date))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].friday.date))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].saturday.date))
+        .append($('<td>').attr('id', 'date-' + frame_data.schedule[i].sunday.date))
         .append($('<td>').attr('id', 'nota-bene-week-' + week_count))
     );
 };
 for (var i in frame_data.schedule) {
     var week_count = String(Number(i) + 1);
-    for (var j in frame_data.schedule[i].monday.tasks) {
-        $('#date-' + frame_data.schedule[i].monday.date).append($('<div>').html(frame_data.schedule[i].monday.tasks[j]));
+    if (frame_data.schedule[i].monday.display) {
+        $('#date-' + frame_data.schedule[i].monday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].monday.date.slice(5))));
+        for (var j in frame_data.schedule[i].monday.tasks) {
+            $('#date-' + frame_data.schedule[i].monday.date).append($('<div>').html(frame_data.schedule[i].monday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].monday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].monday.date.slice(5)));
     };
-    for (var j in frame_data.schedule[i].tuesday.tasks) {
-        $('#date-' + frame_data.schedule[i].tuesday.date).append($('<div>').html(frame_data.schedule[i].tuesday.tasks[j]));
+    if (frame_data.schedule[i].tuesday.display) {
+        $('#date-' + frame_data.schedule[i].tuesday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].tuesday.date.slice(5))));
+        for (var j in frame_data.schedule[i].tuesday.tasks) {
+            $('#date-' + frame_data.schedule[i].tuesday.date).append($('<div>').html(frame_data.schedule[i].tuesday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].tuesday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].tuesday.date.slice(5)));
     };
-    for (var j in frame_data.schedule[i].wednesday.tasks) {
-        $('#date-' + frame_data.schedule[i].wednesday.date).append($('<div>').html(frame_data.schedule[i].wednesday.tasks[j]));
+    if (frame_data.schedule[i].wednesday.display) {
+        $('#date-' + frame_data.schedule[i].wednesday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].wednesday.date.slice(5))));
+        for (var j in frame_data.schedule[i].wednesday.tasks) {
+            $('#date-' + frame_data.schedule[i].wednesday.date).append($('<div>').html(frame_data.schedule[i].wednesday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].wednesday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].wednesday.date.slice(5)));
     };
-    for (var j in frame_data.schedule[i].thursday.tasks) {
-        $('#date-' + frame_data.schedule[i].thursday.date).append($('<div>').html(frame_data.schedule[i].thursday.tasks[j]));
+    if (frame_data.schedule[i].thursday.display) {
+        $('#date-' + frame_data.schedule[i].thursday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].thursday.date.slice(5))));
+        for (var j in frame_data.schedule[i].thursday.tasks) {
+            $('#date-' + frame_data.schedule[i].thursday.date).append($('<div>').html(frame_data.schedule[i].thursday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].thursday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].thursday.date.slice(5)));
     };
-    for (var j in frame_data.schedule[i].friday.tasks) {
-        $('#date-' + frame_data.schedule[i].friday.date).append($('<div>').html(frame_data.schedule[i].friday.tasks[j]));
+    if (frame_data.schedule[i].friday.display) {
+        $('#date-' + frame_data.schedule[i].friday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].friday.date.slice(5))));
+        for (var j in frame_data.schedule[i].friday.tasks) {
+            $('#date-' + frame_data.schedule[i].friday.date).append($('<div>').html(frame_data.schedule[i].friday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].friday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].friday.date.slice(5)));
     };
-    for (var j in frame_data.schedule[i].saturday.tasks) {
-        $('#date-' + frame_data.schedule[i].saturday.date).append($('<div>').html(frame_data.schedule[i].saturday.tasks[j]));
+    if (frame_data.schedule[i].saturday.display) {
+        $('#date-' + frame_data.schedule[i].saturday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].saturday.date.slice(5))));
+        for (var j in frame_data.schedule[i].saturday.tasks) {
+            $('#date-' + frame_data.schedule[i].saturday.date).append($('<div>').html(frame_data.schedule[i].saturday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].saturday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].saturday.date.slice(5)));
     };
-    for (var j in frame_data.schedule[i].sunday.tasks) {
-        $('#date-' + frame_data.schedule[i].sunday.date).append($('<div>').html(frame_data.schedule[i].sunday.tasks[j]));
+    if (frame_data.schedule[i].sunday.display) {
+        $('#date-' + frame_data.schedule[i].sunday.date).append($('<div>').append($('<strong>').html(frame_data.schedule[i].sunday.date.slice(5))));
+        for (var j in frame_data.schedule[i].sunday.tasks) {
+            $('#date-' + frame_data.schedule[i].sunday.date).append($('<div>').html(frame_data.schedule[i].sunday.tasks[j]));
+        };
+    }
+    else {
+        $('#date-' + frame_data.schedule[i].sunday.date).append($('<div>').addClass('text-muted').html(frame_data.schedule[i].sunday.date.slice(5)));
     };
     for (var j in frame_data.schedule[i].nota_bene) {
         $('#nota-bene-week-' + week_count).append($('<div>').html(frame_data.schedule[i].nota_bene[j]));
