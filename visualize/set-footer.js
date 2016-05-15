@@ -1,6 +1,7 @@
 // set-footer.js
 
-$('#footer-info').append($('<p>').html(footer_data.site.name + ' (' + footer_data.site.version + ')'));
+// $('#footer-info').append($('<p>').html(footer_data.site.name + ' (' + footer_data.site.version + ')'));
+$('#footer-info').append($('<p>').append($('<a>').attr('href', footer_data.site.link).html(footer_data.site.name)).append(' (' + footer_data.site.version + ')'));
 $('#footer-info').append($('<p>').attr('id', 'powered-by').html('Powered by '));
 for (var i in footer_data.powered_by) {
     powered_by = footer_data.powered_by[i]
