@@ -16,5 +16,5 @@ $('#footer-info').append($('<p>').html('&copy; ' + footer_data.copyright.year + 
     .append($('<a>').attr('href', footer_data.copyright.organization.link).attr('target', '_blank').html(footer_data.copyright.organization.name))
     .append(footer_data.copyright.organization.suffix)
 );
-$('#footer-info').append($('<p>').append($('<a>').attr('href', footer_data.site.link).html(footer_data.site.link.slice(7, -1))));
+// $('#footer-info').append($('<p>').append($('<a>').attr('href', footer_data.site.link).html(footer_data.site.link.slice(7, -1))));
 $('#footer-info').append($('<p>').append('Email: ').append($('<a>').attr('href', 'mailto:' + footer_data.site.support).html(footer_data.site.support)));
