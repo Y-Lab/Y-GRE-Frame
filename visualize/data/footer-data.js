@@ -4,6 +4,8 @@ footer_data = {
   "site" : {
     "name" : "Y-English GRE Test Preparation Framework",
     "version" : "Development Preview",
+    "link" : "http:\/\/frame.y-gre.org\/",
+    "support" : "support@y-english.org",
   },
   "copyright" : {
     "year" : currentDate.getFullYear(),
@@ -11,7 +13,7 @@ footer_data = {
       "prefix" : "Beijing ",
       "name" : "Y-English",
       "link" : "http:\/\/www.y-english.org\/",
-      "suffix" : " Education & Technology Co., Ltd."
+      "suffix" : " Education & Technology Co., Ltd.",
     },
   },
   "powered_by" : [
