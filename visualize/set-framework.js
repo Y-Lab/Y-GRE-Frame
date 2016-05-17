@@ -6,7 +6,7 @@ $('#site-version').html(footer_data.site.version + ' for ' + frame_data.general.
 
 // General
 $('#main-container').append($('<div>').attr('id', 'general-div').addClass('bs-docs-section')
-    .append($('<h1>').attr('id', 'general-h1').addClass('page-header').html('General'))
+    .append($('<h1>').attr('id', 'general-h1').addClass('page-header').append($('<i>').addClass('fa fa-info-circle')).append(' General'))
     .append($('<h3>').attr('id', 'general-basics-h3').html('Basics'))
     .append($('<div>').attr('id', 'general-basics-div')
         .append($('<div>').addClass('row')
