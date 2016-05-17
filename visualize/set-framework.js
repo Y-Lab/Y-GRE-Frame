@@ -439,7 +439,7 @@ $('#date-' + getCurrentDate()).addClass('info');
 
 // Remarks
 $('#main-container').append($('<div>').attr('id', 'remarks-div').addClass('bs-docs-section')
-    .append($('<h1>').attr('id', 'remarks-h1').addClass('page-header').append($('<i>').addClass('fa fa-sticky-note')).append('Remarks'))
+    .append($('<h1>').attr('id', 'remarks-h1').addClass('page-header').append($('<i>').addClass('fa fa-sticky-note-o')).append(' Remarks'))
     .append($('<ol>').attr('id', 'remarks-ol'))
 );
 for (var i in frame_data.remarks) {
