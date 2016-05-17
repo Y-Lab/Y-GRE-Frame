@@ -307,7 +307,7 @@ $('#sidebar-nav-ul').append($('<li>')
 
 // Schedule
 $('#main-container').append($('<div>').attr('id', 'schedule-div').addClass('bs-docs-section')
-    .append($('<h1>').attr('id', 'schedule-h1').addClass('page-header').html('Schedule'))
+    .append($('<h1>').attr('id', 'schedule-h1').addClass('page-header').append($('<i>').addClass('fa fa-calendar')).append(' Schedule'))
     .append($('<div>').addClass('table-responsive')
         .append($('<table>').addClass('table table-hover')
             .append($('<thead>')
@@ -449,7 +449,7 @@ $('#sidebar-nav-ul').append($('<li>').append($('<a>').attr('href', '#remarks-h1'
 
 // Passkey
 $('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-docs-section')
-    .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').html('Passkey'))
+    .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').append($('<i>').addClass('fa fa-key')).append(' Passkey'))
     .append($('<h3>').attr('id', 'your-passkey-h3').html('Your Passkey'))
     .append($('<p>').addClass('text-muted').html('Due to security reasons, your passkey is the only way to access your Y-English GRE Test Preparation Framework. Please keep it safe. If you forget your passkey, you should contact the Y-English staff to help you retrieve it.'))
     .append($('<p>').addClass('lead').append($('<code>').html(passkey)))
