@@ -5,7 +5,7 @@ footer_data = {
     "name" : "Y-English GRE Test Preparation Framework",
     "version" : "Development Preview",
     "link" : "http:\/\/frame.y-gre.org\/",
-    "support" : "support@y-english.org",
+    "support" : "product@y-english.org",
   },
   "copyright" : {
     "year" : currentDate.getFullYear(),
