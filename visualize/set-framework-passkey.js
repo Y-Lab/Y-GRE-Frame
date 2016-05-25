@@ -1,7 +1,7 @@
 // set-framework-empty.js
 
 $('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-docs-section')
-    .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').append($('<i>').addClass('fa fa-key')).append(' Passkey'))
+    .append($('<h1>').attr('id', 'passkey-h1').addClass('page-header').append($('<i>').attr('aria-hidden', 'true').addClass('fa fa-key')).append(' Passkey'))
     .append($('<form>').attr('action', '/framework/').attr('method', 'get')
         .append($('<div>').addClass('form-group')
             .append($('<p>').addClass('text-muted').html('Due to security reasons, your passkey is the only way to access your Y-English GRE Test Preparation Framework. Please keep it safe. If you forget your passkey, you should contact the Y-English staff to help you retrieve it.'))
