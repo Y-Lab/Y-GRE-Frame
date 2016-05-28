@@ -1,0 +1,41 @@
+{
+    "organization": {
+        "link": "http://www.y-english.org/",
+        "name": "Y-English",
+        "prefix": "Beijing ",
+        "suffix": " Education & Technology Co., Ltd."
+    },
+    "powered_by": [
+        {
+            "link": "http://getbootstrap.com/",
+            "name": "Bootstrap",
+            "version": "v3.3.6"
+        },
+        {
+            "link": "http://jquery.com/",
+            "name": "jQuery",
+            "version": "v1.11.3"
+        },
+        {
+            "link": "http://necolas.github.io/normalize.css/",
+            "name": "normalize.css",
+            "version": "v4.0.0"
+        },
+        {
+            "link": "http://fortawesome.github.io/Font-Awesome/",
+            "name": "Font Awesome",
+            "version": "v4.6.3"
+        },
+        {
+            "link": "http://requirejs.org/",
+            "name": "RequireJS",
+            "version": "v2.2.0"
+        }
+    ],
+    "site": {
+        "link": "http://frame.y-gre.org/",
+        "name": "Y-English GRE Test Preparation Framework",
+        "support": "product@y-english.org",
+        "version": "Development Preview"
+    }
+}
