@@ -35,7 +35,7 @@
     "site": {
         "link": "http://frame.y-gre.org/",
         "name": "Y-English GRE Test Preparation Framework",
-        "support": "product@y-english.org",
+        "support": "dev@y-english.org",
         "version": "Development Preview"
     }
 }
