@@ -456,7 +456,7 @@ $('#main-container').append($('<div>').attr('id', 'passkey-div').addClass('bs-do
     .append($('<p>').addClass('text-muted').html('Due to security reasons, your passkey is the only way to access your Y-English GRE Test Preparation Framework. Please keep it safe. If you forget your passkey, you should contact the Y-English staff to help you retrieve it.'))
     .append($('<p>').addClass('lead').append($('<code>').html(passkey)))
     .append($('<h3>').attr('id', 'update-passkey-h3').html('Update Passkey'))
-    .append($('<form>').attr('action', './framework/').attr('method', 'get')
+    .append($('<form>').attr('action', './').attr('method', 'get')
         .append($('<div>').addClass('form-group')
             .append($('<p>').addClass('text-muted').html('If you have another passkey, you can submit it here.'))
             .append($('<label>').attr('for', 'input-passkey').html('Submit another passkey'))
