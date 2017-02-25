@@ -1,10 +1,8 @@
 // set-framework.js
 
 // Title
-document.title = frame_data.general.basics.name + ' · Y-English GRE Test Preparation Framework';
-$.getJSON('../json/footer-data.json', function(data) {
-    $('#site-version').html(data.site.version + ' for ' + frame_data.general.basics.name);
-});
+document.title = frame_data.general.basics.name + ' - Y-English GRE Test Preparation Framework';
+$('#site-version').html('Development Preview for ' + frame_data.general.basics.name);
 
 // General
 $('#main-container').append($('<div>').attr('id', 'general-div').addClass('bs-docs-section')
