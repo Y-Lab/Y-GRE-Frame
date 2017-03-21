@@ -39,7 +39,7 @@ if (passkey) {
                 function (visualize) {
                     $('#loading-progress-bar div').removeClass('progress-bar-striped');
                     $('#loading-progress-bar div span').html('Well done! ~\\\(≧▽≦)/~');
-                    $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+                    $('#loading-progress-bar').delay(4000).fadeOut(1000, function () {$(this).remove()});
                 },
                 function (err) {
                     $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
@@ -68,7 +68,7 @@ else {
         function (visualize_passkey) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped');
             $('#loading-progress-bar div span').html('Well done! ~\\\(≧▽≦)/~');
-            $('#loading-progress-bar').delay(4000).fadeOut(1000, function() {$(this).remove()});
+            $('#loading-progress-bar').delay(4000).fadeOut(1000, function () {$(this).remove()});
         },
         function (err) {
             $('#loading-progress-bar div').removeClass('progress-bar-striped').removeClass('progress-bar-blue').addClass('progress-bar-danger');
