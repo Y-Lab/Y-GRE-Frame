@@ -16,7 +16,7 @@ contact: dev@y-english.org
 
 logo: /apple-touch-icon.png
 
-gems:
+plugins:
 - jekyll-seo-tag
 - jekyll-sitemap
 
