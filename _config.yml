@@ -3,6 +3,7 @@ google_analytics_id: UA-77162159-1
 repository: https://github.com/Y-Lab/Y-GRE-Frame
 
 timezone: Asia/Shanghai
+lang: zh_CN
 
 name: Y-English GRE Test Preparation Framework
 alias: Y-GRE Frame
