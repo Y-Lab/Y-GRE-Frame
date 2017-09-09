@@ -5,16 +5,19 @@ repository: https://github.com/Y-Lab/Y-GRE-Frame
 timezone: Asia/Shanghai
 lang: zh_CN
 
-name: Y-English GRE Test Preparation Framework
+title: Y-English GRE Test Preparation Framework
 alias: Y-GRE Frame
+description: The Y-English GRE Test Preparation Framework
+url: hhttp://frame.y-gre.org
+
 author: iROCKBUNNY
 author_url: http://irockbunny.com
 organization: Y-English
 organization_url: http://www.y-english.org
-description: The Y-English GRE Test Preparation Framework
-url: hhttp://frame.y-gre.org
+
 contact: dev@y-english.org
 
+image: /apple-touch-icon.png
 logo: /apple-touch-icon.png
 
 plugins:
